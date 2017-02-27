@@ -65,10 +65,6 @@ class SilverStripeAwareInitializer implements InitializerInterface
      */
     public function __construct($frameworkPath)
     {
-        file_put_contents('php://stdout', 'Bootstrapping' . PHP_EOL);
-
-        SapphireTest::start();
-
         // Remove the error handler so that PHPUnit can add its own
         restore_error_handler();
 
